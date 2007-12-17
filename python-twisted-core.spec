@@ -8,7 +8,6 @@ Source0:        http://tmrc.mit.edu/mirror/twisted/Twisted/2.5/TwistedCore-%{ver
 License:        MIT
 Group:          Development/Python
 URL:            http://twistedmatrix.com/projects/core/
-BuildRoot:      %{_tmppath}/%{name}-buildroot
 Requires:       pycrypto
 Requires:       python-OpenSSL python-zope-interface
 BuildRequires:	python-devel python-zope-interface
