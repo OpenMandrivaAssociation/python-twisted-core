@@ -1,4 +1,4 @@
-%define rel 2
+%define rel 3
 
 Summary:        Event-based framework for internet applications
 Name:           python-twisted-core
