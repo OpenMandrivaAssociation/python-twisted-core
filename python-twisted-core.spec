@@ -25,6 +25,13 @@ authentication system that controls access to services and provides
 services with user context information to implement their own security
 models.
 
+%package  doc
+Group:          Development/Python
+Summary:        %name documentation
+
+%description  doc
+Documentation files for %name.
+This consist mainly of the twist api for the core component.
 
 %prep
 %setup -q -n TwistedCore-%{version}
@@ -37,6 +44,8 @@ models.
 %__python setup.py install --root  %buildroot
 # no need for c source code 
 find %buildroot/%_libdir/python%pyver/site-packages/twisted -type f -name '*.c' | xargs rm -f 
+# remove them to gain some diskspace
+find %buildroot/%_libdir/python%pyver/site-packages/twisted -type f -name '*.pyc' | xargs rm -f 
 
 %__install -d                      %buildroot%_mandir/man1
 %__install -m 644 doc/man/*.1      %buildroot%_mandir/man1
@@ -49,9 +58,11 @@ find %buildroot/%_libdir/python%pyver/site-packages/twisted -type f -name '*.c' 
 %defattr(0755,root,root,0755)
 %_bindir/*
 %defattr(0644,root,root,0755)
-%doc CREDITS ChangeLog.Old LICENSE README doc/
+%doc CREDITS LICENSE README 
 %py_platsitedir/*wisted*
 %_mandir/man1/*
 
-
+%files  doc
+# ChangeLog.Old is here as this is big
+%doc doc/ ChangeLog.Old  
 
