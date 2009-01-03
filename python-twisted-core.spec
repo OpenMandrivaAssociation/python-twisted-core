@@ -1,8 +1,8 @@
-%define rel 2
+%define rel 1
 
 Summary:        Event-based framework for internet applications
 Name:           python-twisted-core
-Version:        8.1.0
+Version:        8.2.0
 Release:        %mkrel %rel
 Source0:        http://tmrc.mit.edu/mirror/twisted/Twisted/8.1/TwistedCore-%{version}.tar.bz2
 License:        MIT
@@ -42,10 +42,10 @@ This consist mainly of the twist api for the core component.
 %install
 %__rm -rf %buildroot
 %__python setup.py install --root  %buildroot
-# no need for c source code 
-find %buildroot/%_libdir/python%pyver/site-packages/twisted -type f -name '*.c' | xargs rm -f 
+# no need for c source code
+find %buildroot/%_libdir/python%pyver/site-packages/twisted -type f -name '*.c' | xargs rm -f
 # remove them to gain some diskspace
-find %buildroot/%_libdir/python%pyver/site-packages/twisted -type f -name '*.pyc' | xargs rm -f 
+find %buildroot/%_libdir/python%pyver/site-packages/twisted -type f -name '*.pyc' | xargs rm -f
 
 %__install -d                      %buildroot%_mandir/man1
 %__install -m 644 doc/man/*.1      %buildroot%_mandir/man1
@@ -58,11 +58,11 @@ find %buildroot/%_libdir/python%pyver/site-packages/twisted -type f -name '*.pyc
 %defattr(0755,root,root,0755)
 %_bindir/*
 %defattr(0644,root,root,0755)
-%doc CREDITS LICENSE README 
+%doc CREDITS LICENSE README
 %py_platsitedir/*wisted*
 %_mandir/man1/*
 
 %files  doc
 # ChangeLog.Old is here as this is big
-%doc doc/ ChangeLog.Old  
+%doc doc/ ChangeLog.Old
 
