@@ -1,4 +1,4 @@
-%define rel 1
+%define rel 2
 
 Summary:        Event-based framework for internet applications
 Name:           python-twisted-core
@@ -13,6 +13,9 @@ Requires:       pycrypto
 Requires:       python-OpenSSL python-zope-interface
 BuildRequires:	python-devel python-zope-interface
 Conflicts:      python-twisted < 2.0.0
+
+Patch0:		TwistedCore-8.2.0-python-2.6.patch
+Patch1:		TwistedCore-8.2.0-sagemath.patch
 
 %description
 Twisted is a framework, written in Python, for writing networked
@@ -35,6 +38,8 @@ This consist mainly of the twist api for the core component.
 
 %prep
 %setup -q -n TwistedCore-%{version}
+%patch0	-p1
+%patch1	-p1
 
 %build
 %__python setup.py build
