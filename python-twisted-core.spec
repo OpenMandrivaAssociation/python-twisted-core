@@ -5,7 +5,7 @@ Summary:        Event-based framework for internet applications
 Name:           python-twisted-core
 Version:        9.0.0
 Release:        %mkrel %rel
-Source0:        http://tmrc.mit.edu/mirror/twisted/Twisted/%{mainver}/TwistedCore-%{version}.tar.bz2
+Source0:        http://tmrc.mit.edu/mirror/twisted/Core/%{mainver}/TwistedCore-%{version}.tar.bz2
 License:        MIT
 Group:          Development/Python
 URL:            http://twistedmatrix.com/projects/core/
