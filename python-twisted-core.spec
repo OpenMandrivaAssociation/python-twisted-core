@@ -1,10 +1,11 @@
-%define rel 2
+%define rel 1
+%define mainver %(echo %{version} | sed -e 's/\\([0-9]*\\.[0-9]*\\)\\.[0-9]*/\\1/')
 
 Summary:        Event-based framework for internet applications
 Name:           python-twisted-core
-Version:        8.2.0
+Version:        9.0.0
 Release:        %mkrel %rel
-Source0:        http://tmrc.mit.edu/mirror/twisted/Twisted/8.1/TwistedCore-%{version}.tar.bz2
+Source0:        http://tmrc.mit.edu/mirror/twisted/Twisted/%{mainver}/TwistedCore-%{version}.tar.bz2
 License:        MIT
 Group:          Development/Python
 URL:            http://twistedmatrix.com/projects/core/
@@ -38,7 +39,6 @@ This consist mainly of the twist api for the core component.
 
 %prep
 %setup -q -n TwistedCore-%{version}
-%patch0	-p1
 %patch1	-p1
 
 %build
