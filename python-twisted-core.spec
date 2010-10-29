@@ -1,6 +1,6 @@
 %define name python-twisted-core
 %define version 10.1.0
-%define rel 1
+%define rel 2
 %define mainver %(echo %{version} | sed -e 's/\\([0-9]*\\.[0-9]*\\)\\.[0-9]*/\\1/')
 
 Summary:        Event-based framework for internet applications
