@@ -1,2 +1,4 @@
+removed_sources:
+  TwistedCore-10.1.0.tar.bz2: 472a85f8f262bb46978d1249a115dd919fd754df
 sources:
-  "TwistedCore-10.1.0.tar.bz2": 472a85f8f262bb46978d1249a115dd919fd754df
+  Twisted-13.0.0.tar.bz2: 5c66a4f231a5f3e17860a41498ac80e76a156dca
