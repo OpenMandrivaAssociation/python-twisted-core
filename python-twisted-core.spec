@@ -4,7 +4,7 @@ Summary:        Event-based framework for internet applications
 Name:           python-twisted-core
 Version:        13.0.0
 Release:        1
-Source0:        https://pypi.python.org/packages/source/T/Twisted/Twisted-%{version}.tar.bz2
+Source0:        http://twistedmatrix.com/Releases/Core/13.0/TwistedCore-%{version}.tar.bz2
 License:        MIT
 Group:          Development/Python
 URL:            http://twistedmatrix.com/projects/core/
@@ -35,7 +35,7 @@ Documentation files for %name.
 This consist mainly of the twist api for the core component.
 
 %prep
-%setup -q -n Twisted-%{version}
+%setup -q -n TwistedCore-%{version}
 %patch1	-p1
 
 %build
@@ -48,7 +48,7 @@ This consist mainly of the twist api for the core component.
 find %{buildroot}/%{py_platsitedir}/twisted -type f -name '*.c' | xargs rm -f
 
 %__install -d %{buildroot}%{_mandir}/man1
-%__install -m 644 doc/*/man/*.1 %{buildroot}%{_mandir}/man1
+%__install -m 644 doc/man/*.1 %{buildroot}%{_mandir}/man1
 
 %files
 %defattr(0755,root,root,0755)
