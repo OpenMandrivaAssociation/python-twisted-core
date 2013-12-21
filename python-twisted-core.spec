@@ -2,12 +2,12 @@
 
 Summary:	Event-based framework for internet applications
 Name:		python-twisted-core
-Version:	13.0.0
-Release:	5
+Version:	13.1.0
+Release:	1
 License:	MIT
 Group:		Development/Python
 Url:		http://twistedmatrix.com/projects/core/
-Source0:	http://twistedmatrix.com/Releases/Core/13.0/TwistedCore-%{version}.tar.bz2
+Source0:	http://twistedmatrix.com/Releases/Core/13.1/TwistedCore-%{version}.tar.bz2
 Patch1:	TwistedCore-13.0.0-sagemath.patch
 BuildRequires:	python-zope-interface
 BuildRequires:	pkgconfig(python)
@@ -64,4 +64,5 @@ install -m 644 doc/man/*.1 %{buildroot}%{_mandir}/man1
 %files doc
 # ChangeLog.Old is here as this is big
 %doc doc/
+
 
