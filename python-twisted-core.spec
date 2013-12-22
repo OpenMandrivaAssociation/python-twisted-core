@@ -8,6 +8,7 @@ License:	MIT
 Group:		Development/Python
 Url:		http://twistedmatrix.com/projects/core/
 Source0:	http://twistedmatrix.com/Releases/Core/13.1/TwistedCore-%{version}.tar.bz2
+Source1:    %{name}.rpmlintrc
 Patch1:	TwistedCore-13.0.0-sagemath.patch
 BuildRequires:	python-zope-interface
 BuildRequires:	pkgconfig(python)
