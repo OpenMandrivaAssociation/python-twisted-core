@@ -38,7 +38,7 @@ This consist mainly of the twist api for the core component.
 
 %prep
 %setup -qn TwistedCore-%{version}
-%apply_patches
+%autopatch -p1
 
 %build
 %__python setup.py build
